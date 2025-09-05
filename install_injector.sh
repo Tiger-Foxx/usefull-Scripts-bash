@@ -7,3 +7,6 @@ cd wrk
 make
 cp wrk /usr/local/bin/
 echo "wrk installed" > /root/wrk_install_done.txt
+sudo ip addr add 10.0.0.2/24 dev eth0
+sudo ip route add default via 10.0.0.1
+
