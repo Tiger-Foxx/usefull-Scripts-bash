@@ -6,3 +6,4 @@ systemctl restart nginx
 echo "Web install done" > /root/web_install_done.txt
 sudo ip addr add 10.0.2.2/24 dev eth0
 sudo ip route add default via 10.0.2.1
+sudo apt install tcpdump
