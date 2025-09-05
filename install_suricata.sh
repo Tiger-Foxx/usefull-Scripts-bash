@@ -20,3 +20,8 @@ iptables -I FORWARD -p tcp --dport 80 -j NFQUEUE --queue-num 0
 netfilter-persistent save
 
 echo "Suricata install done" > /root/suricata_install_done.txt
+sudo ip addr add 10.0.0.1/24 dev eth0        # vers Injector
+sudo ip addr add 10.0.1.1/24 dev eth1        # vers WAF
+
+sudo ip link set eth0 up
+sudo ip link set eth1 up
