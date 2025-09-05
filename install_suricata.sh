@@ -10,6 +10,8 @@ apt install -y software-properties-common curl jq
 add-apt-repository ppa:oisf/suricata-stable -y
 apt update
 apt install -y suricata iptables-persistent
+sudo apt install tcpdump
+
 
 # enable ipv4 forwarding
 sysctl -w net.ipv4.ip_forward=1
